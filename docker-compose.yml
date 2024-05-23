@@ -10,6 +10,8 @@ services:
       - CLUSTER_NAME=test
     env_file:
       - ./hadoop.env
+    ports:
+      - "50070:50070"
     networks:
       net-10.9.0.0:
         ipv4_address: 10.9.0.5 
@@ -26,6 +28,8 @@ services:
     networks:
       net-10.9.0.0:
         ipv4_address: 10.9.0.6 
+    ports:
+      - "50075:50075"
 
  
   resourcemanager:
@@ -38,6 +42,8 @@ services:
     networks:
       net-10.9.0.0:
         ipv4_address: 10.9.0.7 
+    ports:
+      - "8088:8088"
 
 
 
@@ -51,6 +57,8 @@ services:
     networks:
       net-10.9.0.0:
         ipv4_address: 10.9.0.8 
+    ports:
+      - "8042:8042"
 
 
   
@@ -66,6 +74,8 @@ services:
     networks:
       net-10.9.0.0:
         ipv4_address: 10.9.0.9 
+    ports:
+      - "8188:8188"
 
 volumes:
   hadoop_namenode:
