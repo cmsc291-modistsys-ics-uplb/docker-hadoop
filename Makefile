@@ -1,6 +1,8 @@
 DOCKER_NETWORK = net-10.9.0.0
 ENV_FILE = hadoop.env
-current_branch := $(shell git rev-parse --abbrev-ref HEAD)
+#current_branch := $(shell git rev-parse --abbrev-ref HEAD)
+current_branch := 2.0.0-hadoop2.7.4-java8
+
 build:
 	docker build -t bde2020/hadoop-base:$(current_branch) ./base
 	docker build -t bde2020/hadoop-namenode:$(current_branch) ./namenode
