@@ -1,4 +1,4 @@
-DOCKER_NETWORK = dockerhadoop_default
+DOCKER_NETWORK = net-10.9.0.0
 ENV_FILE = hadoop.env
 current_branch := $(shell git rev-parse --abbrev-ref HEAD)
 build:
